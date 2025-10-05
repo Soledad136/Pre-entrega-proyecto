@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* menú */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: blanchedalmond;
+  padding: 10px;
+  font-size: 20px;
+  height: 20vp;
+  cursor: pointer;
+}
+ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+/* 
+/* INICIO */
+
+/* .main {
+    display: flex;
+    justify-content: flex-start; */
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 500px 60px;
+  grid-template-areas:
+    "hijo1 hijo2"
+    "hijo3 hijo3";
+    align-items: flex-start;
+}
+
+
+
+.hijo1 {
+  flex-direction: column;
+ justify-content: flex-start;
+  margin-top: 40px;
+  margin-left: 15px;
+  font-size: 21px;
+  padding: 30px;
+  grid-area: hijo1;
+  height: 60vp;
+}
+.signos{
+  padding: 20px;
+  height: 400px;
+  width: 450px;
+}
+
+.hijo2 {
+  flex-direction: column;
+  margin-top: 35px;
+  margin-left: 8px;
+  width: 85%;
+  height: 50%;
+  grid-area: hijo2;
+  height: 60vp;
+  
+}
+p{
+  font-size: 25px;
+  color: rgb(36, 5, 65);
+}
+h1{
+  margin-bottom: 30px;
+}
+
+/* .images2{
+    width: 400px;
+    height: 300px
+} */
+
+/* FOOTER */
+.hijo3 {
+   display: flex;
+  align-items: start;
+  padding: 20px;
+  background-color: burlywood;
+  grid-area: hijo3;
+  height: 20vp;
+}
+
+.imageLOGO {
+  display: flex;
+  margin-left: 5px;
+}
+
+/*   .link1{
+    width: 3%;
+    height: 3%;
+   } */
+/*   .link2{
+    width: 40%;
+    height: 20%;
+    color:black
+   } */
+
+/* PAGINA 1 */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 500px 200px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item3";
+}
+
+.hijo {
+  background-color: rgb(230, 198, 153);
+  color: black;
+  padding: 40px;
+  border-radius: 3px;
+}
+
+.item1 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 700px) {
+  .contenedor-grid {
+    display: grid;
+    grid-template-columns: 350px 350px 460px;
+    grid-template-rows: 500px 100px;
+    grid-template-areas:
+      "hijo1 hijo2 hijo3"
+      "hijo4 hijo4 hijo4";
+  }
+}
