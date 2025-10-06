@@ -11,7 +11,7 @@
   align-items: center;
   background-color: blanchedalmond;
   padding: 10px;
-  font-size: 20px;
+  font-size: 26px;
   height: 20vp;
   cursor: pointer;
 }
@@ -38,18 +38,19 @@ a {
 .contenedor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px 60px;
+  grid-template-rows: 550px 60px;
   grid-template-areas:
     "hijo1 hijo2"
     "hijo3 hijo3";
-    align-items: flex-start;
+  align-items: flex-start;
 }
-
-
+main {
+  background-color: beige;
+}
 
 .hijo1 {
   flex-direction: column;
- justify-content: flex-start;
+  justify-content: flex-start;
   margin-top: 40px;
   margin-left: 15px;
   font-size: 21px;
@@ -57,10 +58,17 @@ a {
   grid-area: hijo1;
   height: 60vp;
 }
-.signos{
+.signos {
+  margin-top: 50px;
   padding: 20px;
   height: 400px;
-  width: 450px;
+  width: 550px;
+}
+.sol {
+  margin-top: 40px;
+  padding: 30px;
+  width: 250px;
+  height: 250px;
 }
 
 .hijo2 {
@@ -71,13 +79,12 @@ a {
   height: 50%;
   grid-area: hijo2;
   height: 60vp;
-  
 }
-p{
+p {
   font-size: 25px;
   color: rgb(36, 5, 65);
 }
-h1{
+h1 {
   margin-bottom: 30px;
 }
 
@@ -88,7 +95,7 @@ h1{
 
 /* FOOTER */
 .hijo3 {
-   display: flex;
+  display: flex;
   align-items: start;
   padding: 20px;
   background-color: burlywood;
@@ -99,6 +106,23 @@ h1{
 .imageLOGO {
   display: flex;
   margin-left: 5px;
+}
+.instagram {
+  display: flex;
+  padding: 20px;
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 700px) {
+  .contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 550px 60px;
+    grid-template-areas:
+      "hijo1 hijo2"
+      "hijo3 hijo3";
+  }
 }
 
 /*   .link1{
@@ -123,7 +147,7 @@ h1{
 }
 
 .hijo {
-  background-color: rgb(230, 198, 153);
+  background-color: beige;
   color: black;
   padding: 40px;
   border-radius: 3px;
@@ -134,15 +158,38 @@ h1{
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
+  grid-area: item1;
+  height: 60vp;
+}
+.item2 {
+  grid-area: item2;
+  height: 60vp;
+}
+.cartanatal {
+  width: 400px;
+  height: 350px;
+}
+.sistemasolar {
+  width: 700px;
+  height: 200px;
 }
 
+.item3 {
+  grid-area: item3;
+  height: 20vp;
+}
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
-    grid-template-columns: 350px 350px 460px;
-    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 200px;
     grid-template-areas:
-      "hijo1 hijo2 hijo3"
-      "hijo4 hijo4 hijo4";
+      "item1 item2"
+      "item3 item3";
   }
+}
+/* PÁGINA 2 */
+.laluna{
+  width:300px;
+  height:300px;
 }
