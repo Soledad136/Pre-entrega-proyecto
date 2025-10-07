@@ -155,11 +155,15 @@ h1 {
 
 .item1 {
   font-size: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   grid-area: item1;
   height: 60vp;
+  
+}
+.título{
+  margin-bottom: 20px;
 }
 .item2 {
   grid-area: item2;
@@ -192,4 +196,50 @@ h1 {
 .laluna{
   width:300px;
   height:300px;
+}
+
+@media (max-width: 700px) {
+  .contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 200px;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item3";
+  }
+}
+
+/* PÁGINA 3 */
+.elascendente{
+  width: 300px;
+  height: 250px;
+}
+
+@media (max-width: 700px) {
+  .contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 200px;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item3";
+  }
+}
+
+
+/*PÁGINA 4 */
+/* .item2 {
+  width: 300px;
+  height: 300px;
+} */
+
+@media (max-width: 700px) {
+  .contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 200px;
+    grid-template-areas:
+      "item1 item2"
+      "footer footer";
+  }
 }
