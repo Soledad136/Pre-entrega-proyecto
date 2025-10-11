@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /*comentario en css y scss*/
+
+/*Index*/
 .header {
   display: flex;
   justify-content: space-around;
@@ -7,7 +9,7 @@
   background-color: blanchedalmond;
   padding: 10px;
   font-size: 26px;
-  height: 20vp;
+  height: 20vh;
   cursor: pointer;
 }
 
@@ -25,11 +27,6 @@ a {
   color: black;
 }
 
-/* 
-/* INICIO */
-/* .main {
-    display: flex;
-    justify-content: flex-start; */
 .contenedor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -50,7 +47,7 @@ main {
   font-size: 21px;
   padding: 30px;
   grid-area: hijo1;
-  height: 60vp;
+  height: 60vh;
 }
 
 .signos {
@@ -74,7 +71,7 @@ main {
   width: 85%;
   height: 50%;
   grid-area: hijo2;
-  height: 60vp;
+  height: 60vh;
 }
 
 p {
@@ -86,18 +83,15 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* .images2{
-    width: 400px;
-    height: 300px
-} */
 /* FOOTER */
 .hijo3 {
   display: flex;
+
   align-items: start;
   padding: 20px;
   background-color: burlywood;
   grid-area: hijo3;
-  height: 20vp;
+  height: 20vh;
 }
 
 .imageLOGO {
@@ -120,15 +114,7 @@ h1 {
     grid-template-areas: "hijo1 hijo2" "hijo3 hijo3";
   }
 }
-/*   .link1{
-    width: 3%;
-    height: 3%;
-   } */
-/*   .link2{
-    width: 40%;
-    height: 20%;
-    color:black
-   } */
+
 /* PAGINA 1 */
 .grid-container {
   display: grid;
