@@ -1,7 +1,5 @@
 @charset "UTF-8";
 /*comentario en css y scss*/
-
-/*Index*/
 .header {
   display: flex;
   justify-content: space-around;
@@ -12,25 +10,24 @@
   height: 20vh;
   cursor: pointer;
 }
-
-ul li {
+.header ul li {
   display: inline-block;
   margin: 10px;
-}
-
-li {
   list-style: none;
 }
-
-a {
+.header ul li a {
   text-decoration: none;
   color: black;
 }
 
+/* INICIO */
+/* .main {
+    display: flex;
+    justify-content: flex-start; */
 .contenedor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 550px 60px;
+  grid-template-rows: 650px 60px;
   grid-template-areas: "hijo1 hijo2" "hijo3 hijo3";
   align-items: flex-start;
 }
@@ -47,14 +44,14 @@ main {
   font-size: 21px;
   padding: 30px;
   grid-area: hijo1;
-  height: 60vh;
+  height: 60vp;
 }
 
 .signos {
   margin-top: 50px;
   padding: 20px;
-  height: 400px;
-  width: 550px;
+  height: 350px;
+  width: 500px;
 }
 
 .sol {
@@ -71,58 +68,63 @@ main {
   width: 85%;
   height: 50%;
   grid-area: hijo2;
-  height: 60vh;
+  height: 60vp;
 }
 
 p {
-  font-size: 25px;
-  color: rgb(36, 5, 65);
+  font-size: 25px 25px;
+  color: rgb(36, 5, 65) rgb(36, 5, 65);
 }
 
 h1 {
   margin-bottom: 30px;
 }
 
+/* .images2{
+    width: 400px;
+    height: 300px
+} */
 /* FOOTER */
 .hijo3 {
   display: flex;
-
   align-items: start;
-  padding: 20px;
-  background-color: burlywood;
+  background-color: rgb(231, 186, 118);
+  width: 100%;
   grid-area: hijo3;
-  height: 20vh;
-}
-
-.imageLOGO {
-  display: flex;
-  margin-left: 5px;
+  height: 20vp;
 }
 
 .instagram {
   display: flex;
-  padding: 20px;
-  width: 15px;
-  height: 15px;
+  padding: 30px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 550px 60px;
+    grid-template-rows: 650px 60px;
     grid-template-areas: "hijo1 hijo2" "hijo3 hijo3";
   }
 }
-
+/*   .link1{
+    width: 3%;
+    height: 3%;
+   } */
+/*   .link2{
+    width: 40%;
+    height: 20%;
+    color:black
+   } */
 /* PAGINA 1 */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 900px 200px;
-  grid-template-areas:
-    "item1 item2"
-    "item3 item3";
+  grid-template-rows: 650px 100px;
+  grid-template-areas: "item1 item2" "item3 item3";
 }
 
 .hijo {
@@ -136,8 +138,9 @@ h1 {
   font-size: 25px;
   margin-bottom: 30px;
   display: flex;
+  flex-direction: column;
   grid-area: item1;
-  height: 60vh;
+  height: 60vp;
 }
 
 .título {
@@ -146,7 +149,7 @@ h1 {
 
 .item2 {
   grid-area: item2;
-  height: 60vh;
+  height: 60vp;
 }
 
 .cartanatal {
@@ -155,42 +158,65 @@ h1 {
 }
 
 .sistemasolar {
+  width: 700px;
+  height: 200px;
   width: 100%;
-  height: 100px;
-  display: block;
 }
 
 .item3 {
   grid-area: item3;
+  height: 20vp;
   width: 100%;
-  height: 20vh;
-  display: block;
 }
 
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 900px 200px;
-    grid-template-areas:
-      "item1 item2"
-      "item3 item3";
+    grid-template-rows: 650px 100px;
+    grid-template-areas: "item1 item2" "item3 item3";
   }
 }
 /* PÁGINA 2 */
+.grid-container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 650px 50px;
+  grid-template-areas: "item1 item2" "item3 item3";
+}
+
+.hijo {
+  background-color: beige;
+  color: black;
+  padding: 40px;
+  border-radius: 3px;
+}
+
+.item3 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  grid-area: item5;
+  height: 60vp;
+}
+
 .laluna {
   width: 300px;
   height: 300px;
 }
 
+.hijo .item3 {
+  background-color: burlywood;
+  width: 100%;
+}
+
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 500px 200px;
-    grid-template-areas:
-      "item1 item2"
-      "item3 item3";
+    grid-template-rows: 650px 100px;
+    grid-template-areas: "item1 item2" "item3 item3";
   }
 }
 

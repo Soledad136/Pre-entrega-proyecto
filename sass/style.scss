@@ -1,33 +1,30 @@
-/*comentario en css y scss*/ 
-//import variables 
-@use "utilidades/variables" as *;
-
+/*comentario en css y scss*/
+//import variables
+@use "utilidades/_variables.scss" as *;
 
 .header {
- display: flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: $color-header blanchedalmond;
+  background-color: blanchedalmond;
   padding: 10px;
-  font-size: $font-size-header 26px;
+  font-size: 26px;
   height: 20vh;
   cursor: pointer;
 
+  ul {
+    li {
+      display: inline-block;
+      margin: 10px;
+      list-style: none;
 
-ul {
-  li {
-  display: inline-block;
-  margin: 10px;
-  list-style: none;
-
-a {
-  text-decoration: none;
-  color: $color-link black;
-}
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
   }
 }
-}
-
 
 /* INICIO */
 
@@ -38,14 +35,14 @@ a {
 .contenedor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 550px 60px;
+  grid-template-rows: 650px 60px;
   grid-template-areas:
     "hijo1 hijo2"
     "hijo3 hijo3";
   align-items: flex-start;
 }
 main {
-  background-color: $color-fondo-principal beige;
+  background-color: beige;
 }
 
 .hijo1 {
@@ -61,8 +58,8 @@ main {
 .signos {
   margin-top: 50px;
   padding: 20px;
-  height: 400px;
-  width: 550px;
+  height: 350px;
+  width: 500px;
 }
 .sol {
   margin-top: 40px;
@@ -97,28 +94,25 @@ h1 {
 .hijo3 {
   display: flex;
   align-items: start;
-  padding: 20px;
-  background-color: $color-footer burlywood;
+  background-color: rgb(231, 186, 118);
+  width: 100%;
   grid-area: hijo3;
   height: 20vp;
 }
 
-.imageLOGO {
-  display: flex;
-  margin-left: 5px;
-}
 .instagram {
   display: flex;
-  padding: 20px;
-  width: 15px;
-  height: 15px;
+  padding: 30px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 550px 60px;
+    grid-template-rows: 650px 60px;
     grid-template-areas:
       "hijo1 hijo2"
       "hijo3 hijo3";
@@ -140,7 +134,7 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px 200px;
+  grid-template-rows: 650px 100px;
   grid-template-areas:
     "item1 item2"
     "item3 item3";
@@ -154,15 +148,14 @@ h1 {
 }
 
 .item1 {
-  font-size: $font-size-item1 25px;
+  font-size: 25px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   grid-area: item1;
   height: 60vp;
-  
 }
-.título{
+.título {
   margin-bottom: 20px;
 }
 .item2 {
@@ -176,33 +169,64 @@ h1 {
 .sistemasolar {
   width: 700px;
   height: 200px;
+  width: 100%;
 }
 
 .item3 {
   grid-area: item3;
   height: 20vp;
+  width: 100%;
 }
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 500px 200px;
+    grid-template-rows: 650px 100px;
     grid-template-areas:
       "item1 item2"
       "item3 item3";
   }
 }
 /* PÁGINA 2 */
-.laluna{
-  width:300px;
-  height:300px;
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 650px 50px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item3";
+}
+.hijo {
+  background-color: beige;
+  color: black;
+  padding: 40px;
+  border-radius: 3px;
+}
+
+.item3 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  grid-area: item5;
+  height: 60vp;
+}
+
+.laluna {
+  width: 300px;
+  height: 300px;
+}
+.hijo .item3 {
+  background-color: burlywood;
+  width: 100%;
 }
 
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 500px 200px;
+    grid-template-rows: 650px 100px;
     grid-template-areas:
       "item1 item2"
       "item3 item3";
