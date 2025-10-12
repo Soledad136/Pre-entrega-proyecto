@@ -119,7 +119,7 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 800px 100px;
+  grid-template-rows: 900px 200px;
   grid-template-areas:
     "item1 item2"
     "item3 item3";
@@ -155,20 +155,23 @@ h1 {
 }
 
 .sistemasolar {
-  width: 700px;
-  height: 200px;
+  width: 100%;
+  height: 100px;
+  display: block;
 }
 
 .item3 {
   grid-area: item3;
+  width: 100%;
   height: 20vh;
+  display: block;
 }
 
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 800px 100px;
+    grid-template-rows: 900px 200px;
     grid-template-areas:
       "item1 item2"
       "item3 item3";
