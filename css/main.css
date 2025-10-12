@@ -119,8 +119,10 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px 200px;
-  grid-template-areas: "item1 item2" "item3 item3";
+  grid-template-rows: 800px 100px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item3";
 }
 
 .hijo {
@@ -134,9 +136,8 @@ h1 {
   font-size: 25px;
   margin-bottom: 30px;
   display: flex;
-  flex-direction: column;
   grid-area: item1;
-  height: 60vp;
+  height: 60vh;
 }
 
 .título {
@@ -145,7 +146,7 @@ h1 {
 
 .item2 {
   grid-area: item2;
-  height: 60vp;
+  height: 60vh;
 }
 
 .cartanatal {
@@ -160,15 +161,17 @@ h1 {
 
 .item3 {
   grid-area: item3;
-  height: 20vp;
+  height: 20vh;
 }
 
 @media (max-width: 700px) {
   .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 500px 200px;
-    grid-template-areas: "item1 item2" "item3 item3";
+    grid-template-rows: 800px 100px;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item3";
   }
 }
 /* PÁGINA 2 */
@@ -182,7 +185,9 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 500px 200px;
-    grid-template-areas: "item1 item2" "item3 item3";
+    grid-template-areas:
+      "item1 item2"
+      "item3 item3";
   }
 }
 
