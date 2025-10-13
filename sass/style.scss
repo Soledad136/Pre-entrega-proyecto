@@ -53,7 +53,7 @@ main {
   font-size: 21px;
   padding: 30px;
   grid-area: hijo1;
-  height: 60vp;
+  height: 60vh;
 }
 .signos {
   margin-top: 50px;
@@ -75,7 +75,7 @@ main {
   width: 85%;
   height: 50%;
   grid-area: hijo2;
-  height: 60vp;
+  height: 60vh;
 }
 p {
   font-size: $font-size-principal 25px;
@@ -97,7 +97,7 @@ h1 {
   background-color: rgb(231, 186, 118);
   width: 100%;
   grid-area: hijo3;
-  height: 20vp;
+  height: 20vh;
 }
 
 .instagram {
@@ -134,10 +134,10 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 650px 100px;
+  grid-template-rows: 780px 50px;
   grid-template-areas:
     "item1 item2"
-    "item3 item3";
+    "imagen2 imagen2";
 }
 
 .hijo {
@@ -153,38 +153,38 @@ h1 {
   display: flex;
   flex-direction: column;
   grid-area: item1;
-  height: 60vp;
+  height: 60vh;
+  list-style-type: none;
 }
 .título {
   margin-bottom: 20px;
 }
 .item2 {
   grid-area: item2;
-  height: 60vp;
+  height: 60vh;
+
 }
 .cartanatal {
   width: 400px;
   height: 350px;
 }
-.sistemasolar {
-  width: 700px;
-  height: 200px;
+.imagen2{
+  height: 70px;
   width: 100%;
+  grid-area: imagen2;
+  height: 20vh;
 }
 
-.item3 {
-  grid-area: item3;
-  height: 20vp;
-  width: 100%;
-}
+
+
 @media (max-width: 700px) {
-  .contenedor-grid {
+  .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 650px 100px;
+    grid-template-rows: 780px 50px;
     grid-template-areas:
       "item1 item2"
-      "item3 item3";
+      "imagen2 imagen2";
   }
 }
 /* PÁGINA 2 */
@@ -203,17 +203,20 @@ h1 {
   padding: 40px;
   border-radius: 3px;
 }
-
+.item1{
+  list-style-type: none;
+}
 .item3 {
-  font-size: 25px;
+  font-size: 15px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  grid-area: item5;
-  height: 60vp;
+  grid-area: item3;
+  height: 60vh;
 }
 
 .laluna {
+  margin-top: 70px;
   width: 300px;
   height: 300px;
 }
@@ -223,7 +226,7 @@ h1 {
 }
 
 @media (max-width: 700px) {
-  .contenedor-grid {
+  .grid-container1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 650px 100px;
