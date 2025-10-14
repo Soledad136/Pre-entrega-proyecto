@@ -123,7 +123,7 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 780px 50px;
+  grid-template-rows: 800px 100px;
   grid-template-areas: "item1 item2" "imagen2 imagen2";
 }
 
@@ -154,13 +154,15 @@ h1 {
 }
 
 .cartanatal {
-  width: 400px;
-  height: 350px;
+  margin-top: 80px;
+  width: 500px;
+  height: 400px;
 }
 
 .imagen2 {
-  height: 70px;
-  width: 100%;
+  display: grid;
+  width: 15%;
+  display: flex;
   grid-area: imagen2;
   height: 20vh;
 }
@@ -169,7 +171,7 @@ h1 {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 780px 50px;
+    grid-template-rows: 800px 100px;
     grid-template-areas: "item1 item2" "imagen2 imagen2";
   }
 }
@@ -177,7 +179,7 @@ h1 {
 .grid-container1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 650px 50px;
+  grid-template-rows: 700px 100px;
   grid-template-areas: "item1 item2" "item3 item3";
 }
 
@@ -189,20 +191,16 @@ h1 {
 }
 
 .item1 {
-  list-style-type: none;
+  grid-area: item1;
+  height: 40vh;
 }
 
-.item3 {
-  font-size: 15px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  grid-area: item3;
-  height: 60vh;
+.item2 {
+  grid-area: item2;
+  height: 40vh;
 }
 
 .laluna {
-  margin-top: 70px;
   width: 300px;
   height: 300px;
 }
@@ -212,11 +210,20 @@ h1 {
   width: 100%;
 }
 
+.item3 {
+  font-size: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  grid-area: item3;
+  height: 10vh;
+}
+
 @media (max-width: 700px) {
   .grid-container1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 650px 100px;
+    grid-template-rows: 700px 100px;
     grid-template-areas: "item1 item2" "item3 item3";
   }
 }
