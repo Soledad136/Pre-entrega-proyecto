@@ -134,7 +134,7 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 780px 50px;
+  grid-template-rows: 800px 100px;
   grid-template-areas:
     "item1 item2"
     "imagen2 imagen2";
@@ -168,20 +168,21 @@ h1 {
   width: 400px;
   height: 350px;
 }
-.imagen2{
-  height: 70px;
-  width: 100%;
-  grid-area: imagen2;
-  height: 20vh;
-}
 
+
+.imagen2 {
+    width: 500px;        
+    display: flex;  
+    grid-area: imagen2;
+    height:20vh;
+}
 
 
 @media (max-width: 700px) {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 780px 50px;
+    grid-template-rows: 800px 100px;
     grid-template-areas:
       "item1 item2"
       "imagen2 imagen2";
