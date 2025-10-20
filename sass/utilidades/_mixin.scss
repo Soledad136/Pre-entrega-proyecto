@@ -4,3 +4,9 @@
   justify-content: space-around;
   align-items: center;
 }
+
+@mixin medidas($width, $height)
+{
+  width: $width;
+  height: $height;
+}

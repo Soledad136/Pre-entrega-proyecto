@@ -7,6 +7,12 @@
 @use "../sass/utilidades/variables" as *;
 @use "../sass/utilidades/mixin" as *;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .header {
   background-color: $color-header;
   padding: 10px;
@@ -30,92 +36,89 @@
 }
 
 /* INICIO */
-main {
-  background-color: $color-principal;
 
+main {
+  background-color: beige;
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 650px 60px;
+  grid-template-areas:
+    "hijo1 hijo2"
+    "hijo3 hijo3";
+  align-items: flex-start;
+
+  .hijo1 {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-left: 15px;
+    padding: 30px;
+    grid-area: hijo1;
+    height: 60vh;
+    text-decoration: none;
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: $font-size-principal;
+      color: $color-texto;
+    }
+
+    .sol {
+      margin-top: 40px;
+      padding: 30px;
+      @include medidas(250px, 250px);
+    }
+  }
+
+  .hijo2 {
+    flex-direction: column;
+    margin-top: 35px;
+    margin-left: 8px;
+    @include medidas(550px, 60vh);
+    grid-area: hijo2;
+    height: 60vh;
+
+    .signos {
+      padding: 100px;
+      @include medidas(500px, 450px);
+    }
+  }
+
+  .hijo3 {
+    @include flex;
+    align-items: start;
+    background-color: $color-footer;
+    width: 100%;
+    grid-area: hijo3;
+    height: 20vh;
+
+    .instagram {
+      @include flex;
+       padding: 30px;
+      @include medidas(25px, 25px);
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 700px) {
   .contenedor-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 650px 60px;
     grid-template-areas:
       "hijo1 hijo2"
       "hijo3 hijo3";
-    align-items: flex-start;
-
-    .hijo1 {
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-top: 40px;
-      margin-left: 15px;
-      font-size: 21px;
-      padding: 30px;
-      grid-area: hijo1;
-      height: 60vh;
-      text-decoration: none;
-
-      .signos {
-        margin-top: 50px;
-        padding: 20px;
-        height: 350px;
-        width: 500px;
-
-        .sol {
-          margin-top: 40px;
-          padding: 30px;
-          width: 250px;
-          height: 250px;
-        }
-      }
-    }
-
-    .hijo2 {
-      flex-direction: column;
-      margin-top: 35px;
-      margin-left: 8px;
-      width: 85%;
-      height: 60vh;
-      grid-area: hijo2;
-
-      p {
-        font-size: $font-size-principal;
-        color: $color-texto;
-      }
-
-      h1 {
-        margin-bottom: 30px;
-      }
-    }
-
-    .hijo3 {
-      @include flex;
-      align-items: start;
-      background-color: $color-footer;
-      width: 100%;
-      grid-area: hijo3;
-      height: 20vh;
-
-      .instagram {
-        @include flex;
-        padding: 30px;
-        width: 25px;
-        height: 25px;
-        cursor: pointer;
-      }
-    }
-  }
-
-  @media (max-width: 700px) {
-    .contenedor-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 650px 60px;
-      grid-template-areas:
-        "hijo1 hijo2"
-        "hijo3 hijo3";
-    }
   }
 }
 
 /* PAGINA 1 */
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -136,29 +139,26 @@ main {
       flex-direction: column;
       grid-area: item1;
       height: 60vh;
-      list-style-type: none;
+      text-decoration: none;
+      list-style: none;
     }
     .item2 {
       grid-area: item2;
       height: 60vh;
 
-    
-
       .cartanatal {
         margin-top: 80px;
-        width: 350px;
-        height: 250px;
+        @include medidas(450px, 450px);
       }
     }
   }
+}
 
-
-  .imagen2 {
-    display: flex;
-    grid-area: imagen2;
-    height: 20vh;
-    width: 15%;
-  }
+.imagen2 {
+  display: flex;
+  grid-area: imagen2;
+  height: 20vh;
+  width: 15%;
 }
 
 @media (max-width: 700px) {
@@ -171,12 +171,39 @@ main {
   }
 }
 
-/* PÁGINA 2 */
-.laluna {
-  width: 300px;
-  height: 300px;
+//PÁGINA 2//
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 800px 100px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item3";
 
   .hijo {
+    background-color: beige;
+
+    padding: 40px;
+
+    .item1 {
+      li {
+        font-size: 25px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        grid-area: item1;
+        height: 60vh;
+        text-decoration: none;
+      }
+    }
+    .item2 {
+      .laluna {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
     .item3 {
       background-color: burlywood;
       width: 100%;
