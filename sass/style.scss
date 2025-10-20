@@ -14,6 +14,7 @@
 }
 
 .header {
+  justify-content: flex-start;
   background-color: $color-header;
   padding: 10px;
   font-size: 26px;
@@ -44,7 +45,7 @@ main {
 .contenedor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 650px 60px;
+  grid-template-rows: 650px 80px;
   grid-template-areas:
     "hijo1 hijo2"
     "hijo3 hijo3";
@@ -58,7 +59,6 @@ main {
     padding: 30px;
     grid-area: hijo1;
     height: 60vh;
-    text-decoration: none;
 
     h1 {
       margin-bottom: 30px;
@@ -70,9 +70,9 @@ main {
     }
 
     .sol {
-      margin-top: 40px;
-      padding: 30px;
-      @include medidas(250px, 250px);
+      margin-top: 30px;
+      padding: 40px;
+      @include medidas(350px, 350px);
     }
   }
 
@@ -80,29 +80,31 @@ main {
     flex-direction: column;
     margin-top: 35px;
     margin-left: 8px;
-    @include medidas(550px, 60vh);
     grid-area: hijo2;
     height: 60vh;
 
     .signos {
       padding: 100px;
-      @include medidas(500px, 450px);
+      @include medidas(650px, 600px);
+      border-radius: 15px;
     }
   }
 
   .hijo3 {
     @include flex;
+     justify-content:left;
     align-items: start;
     background-color: $color-footer;
     width: 100%;
     grid-area: hijo3;
     height: 20vh;
 
-    .instagram {
+    .logo {
       @include flex;
-       padding: 30px;
-      @include medidas(25px, 25px);
-      cursor: pointer;
+      float: left;
+      padding: 40px;
+      @include medidas(120px, 120px);
+      cursor:pointer;
     }
   }
 }
@@ -110,7 +112,7 @@ main {
 @media (max-width: 700px) {
   .contenedor-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 650px 60px;
+    grid-template-rows: 650px 80px;
     grid-template-areas:
       "hijo1 hijo2"
       "hijo3 hijo3";
@@ -127,28 +129,37 @@ main {
     "item1 item2"
     "imagen2 imagen2";
 
-  .hijo {
-    background-color: beige;
-
-    padding: 40px;
-
+  
     .item1 {
+      @include flex;
+      flex-direction: column;;
+      text-decoration: none;
+      list-style-type:none;
+      background-color: beige;
+      padding: 40px;
+      margin-top: 20px;
       font-size: 25px;
-      margin-bottom: 30px;
-      display: flex;
-      flex-direction: column;
+      margin-bottom: 30px; 
       grid-area: item1;
       height: 60vh;
-      text-decoration: none;
-      list-style: none;
-    }
+      ul {
+        list-style-type: none;
+        justify-content: left;
+      }
+   
+  h2{
+    margin-bottom: 30px;
+  }
+  
     .item2 {
+      @include medidas(70px, 70px);
       grid-area: item2;
       height: 60vh;
+      margin-top:80px;
 
       .cartanatal {
         margin-top: 80px;
-        @include medidas(450px, 450px);
+        @include medidas (70px,70px)
       }
     }
   }
@@ -159,6 +170,7 @@ main {
   grid-area: imagen2;
   height: 20vh;
   width: 15%;
+  @include medidas (15%, 80px)
 }
 
 @media (max-width: 700px) {
@@ -173,46 +185,65 @@ main {
 
 //PÁGINA 2//
 
-.grid-container {
+.grid-container1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 800px 100px;
   grid-template-areas:
-    "item1 item2"
-    "item3 item3";
+    "item4 item5"
+    "item6 item6";
 
   .hijo {
     background-color: beige;
 
     padding: 40px;
 
-    .item1 {
-      li {
-        font-size: 25px;
-        margin-bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        grid-area: item1;
-        height: 60vh;
-        text-decoration: none;
-      }
-    }
-    .item2 {
-      .laluna {
-        width: 300px;
-        height: 300px;
+ .item4 {
+      @include flex;
+      flex-direction: column;;
+      text-decoration: none;
+      list-style-type:none;
+      background-color: beige;
+      padding: 40px;
+      margin-top: 20px;
+      font-size: 25px;
+      margin-bottom: 30px; 
+      grid-area: item4;
+      height: 60vh;
+      ul {
+        list-style-type: none;
+        justify-content: left;
       }
     }
 
-    .item3 {
+    .item5 {
+      .laluna {
+        width: 300px;
+        height: 300px;
+        grid-area: item5;
+        height: 60vh;
+      }
+    }
+
+    .item6 {
       background-color: burlywood;
       width: 100%;
       font-size: 15px;
       margin-bottom: 30px;
       display: flex;
       flex-direction: column;
-      grid-area: item3;
+      grid-area: item6;
       height: 10vh;
     }
+  }
+}
+
+@media (max-width: 700px) {
+  .grid-container1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 800px 100px;
+    grid-template-areas:
+      "item4 item5"
+      "item6 item6";
   }
 }

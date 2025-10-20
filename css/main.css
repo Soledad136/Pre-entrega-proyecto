@@ -13,6 +13,7 @@
 }
 
 .header {
+  justify-content: flex-start;
   background-color: burlywood;
   padding: 10px;
   font-size: 26px;
@@ -40,7 +41,7 @@ main {
 .contenedor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 650px 60px;
+  grid-template-rows: 650px 80px;
   grid-template-areas: "hijo1 hijo2" "hijo3 hijo3";
   align-items: flex-start;
 }
@@ -52,7 +53,6 @@ main {
   padding: 30px;
   grid-area: hijo1;
   height: 60vh;
-  text-decoration: none;
 }
 .contenedor-grid .hijo1 h1 {
   margin-bottom: 30px;
@@ -62,49 +62,50 @@ main {
   color: rgb(36, 5, 65);
 }
 .contenedor-grid .hijo1 .sol {
-  margin-top: 40px;
-  padding: 30px;
-  width: 250px;
-  height: 250px;
+  margin-top: 30px;
+  padding: 40px;
+  width: 350px;
+  height: 350px;
 }
 .contenedor-grid .hijo2 {
   flex-direction: column;
   margin-top: 35px;
   margin-left: 8px;
-  width: 550px;
-  height: 60vh;
   grid-area: hijo2;
   height: 60vh;
 }
 .contenedor-grid .hijo2 .signos {
   padding: 100px;
-  width: 500px;
-  height: 450px;
+  width: 650px;
+  height: 600px;
+  border-radius: 15px;
 }
 .contenedor-grid .hijo3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  justify-content: left;
   align-items: start;
   background-color: burlywood;
   width: 100%;
   grid-area: hijo3;
   height: 20vh;
 }
-.contenedor-grid .hijo3 .instagram {
+.contenedor-grid .hijo3 .logo {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 30px;
-  width: 25px;
-  height: 25px;
+  float: left;
+  padding: 40px;
+  width: 120px;
+  height: 120px;
   cursor: pointer;
 }
 
 @media (max-width: 700px) {
   .contenedor-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 650px 60px;
+    grid-template-rows: 650px 80px;
     grid-template-areas: "hijo1 hijo2" "hijo3 hijo3";
   }
 }
@@ -115,28 +116,39 @@ main {
   grid-template-rows: 800px 100px;
   grid-template-areas: "item1 item2" "imagen2 imagen2";
 }
-.grid-container .hijo {
+.grid-container .item1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
   background-color: beige;
   padding: 40px;
-}
-.grid-container .hijo .item1 {
+  margin-top: 20px;
   font-size: 25px;
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
   grid-area: item1;
   height: 60vh;
-  text-decoration: none;
-  list-style: none;
 }
-.grid-container .hijo .item2 {
+.grid-container .item1 ul {
+  list-style-type: none;
+  justify-content: left;
+}
+.grid-container .item1 h2 {
+  margin-bottom: 30px;
+}
+.grid-container .item1 .item2 {
+  width: 70px;
+  height: 70px;
   grid-area: item2;
   height: 60vh;
-}
-.grid-container .hijo .item2 .cartanatal {
   margin-top: 80px;
-  width: 450px;
-  height: 450px;
+}
+.grid-container .item1 .item2 .cartanatal {
+  margin-top: 80px;
+  width: 70px;
+  height: 70px;
 }
 
 .imagen2 {
@@ -144,6 +156,8 @@ main {
   grid-area: imagen2;
   height: 20vh;
   width: 15%;
+  width: 15%;
+  height: 80px;
 }
 
 @media (max-width: 700px) {
@@ -153,38 +167,58 @@ main {
     grid-template-areas: "item1 item2" "imagen2 imagen2";
   }
 }
-.grid-container {
+.grid-container1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 800px 100px;
-  grid-template-areas: "item1 item2" "item3 item3";
+  grid-template-areas: "item4 item5" "item6 item6";
 }
-.grid-container .hijo {
+.grid-container1 .hijo {
   background-color: beige;
   padding: 40px;
 }
-.grid-container .hijo .item1 li {
+.grid-container1 .hijo .item4 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: beige;
+  padding: 40px;
+  margin-top: 20px;
   font-size: 25px;
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  grid-area: item1;
+  grid-area: item4;
   height: 60vh;
-  text-decoration: none;
 }
-.grid-container .hijo .item2 .laluna {
+.grid-container1 .hijo .item4 ul {
+  list-style-type: none;
+  justify-content: left;
+}
+.grid-container1 .hijo .item5 .laluna {
   width: 300px;
   height: 300px;
+  grid-area: item5;
+  height: 60vh;
 }
-.grid-container .hijo .item3 {
+.grid-container1 .hijo .item6 {
   background-color: burlywood;
   width: 100%;
   font-size: 15px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  grid-area: item3;
+  grid-area: item6;
   height: 10vh;
+}
+
+@media (max-width: 700px) {
+  .grid-container1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 800px 100px;
+    grid-template-areas: "item4 item5" "item6 item6";
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
