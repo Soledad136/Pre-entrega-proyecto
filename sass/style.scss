@@ -13,6 +13,8 @@
   box-sizing: border-box;
 }
 
+
+
 .header {
   justify-content: flex-start;
   background-color: $color-header;
@@ -92,19 +94,30 @@ main {
 
   .hijo3 {
     @include flex;
-     justify-content:left;
-    align-items: start;
+    justify-content: left;
+    align-items: flex-start;
     background-color: $color-footer;
     width: 100%;
     grid-area: hijo3;
     height: 20vh;
+    margin-top: 70px;
+
 
     .logo {
       @include flex;
       float: left;
       padding: 40px;
       @include medidas(120px, 120px);
-      cursor:pointer;
+      cursor: pointer;
+      align-items: flex-start;
+
+      .estilofooter{
+        @include flex;
+        align-items:flex-start;
+        margin-top: 40px;
+        
+        
+      }
     }
   }
 }
@@ -129,50 +142,48 @@ main {
     "item1 item2"
     "imagen2 imagen2";
 
-  
-    .item1 {
-      @include flex;
-      flex-direction: column;;
-      text-decoration: none;
-      list-style-type:none;
-      background-color: beige;
-      padding: 40px;
-      margin-top: 20px;
-      font-size: 25px;
-      margin-bottom: 30px; 
-      grid-area: item1;
-      height: 60vh;
-      ul {
-        list-style-type: none;
-        justify-content: left;
-      }
-   
-  h2{
+  .item1 {
+    @include flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: beige;
+    padding: 40px;
+    margin-top: 20px;
+    font-size: 25px;
     margin-bottom: 30px;
-  }
-  
+    grid-area: item1;
+    height: 60vh;
+    ul {
+      list-style-type: none;
+      justify-content: left;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
     .item2 {
       @include medidas(70px, 70px);
       grid-area: item2;
       height: 60vh;
-      margin-top:80px;
+      margin-top: 80px;
 
       .cartanatal {
         margin-top: 80px;
-        @include medidas (70px,70px)
+        @include medidas(70px, 70px);
       }
     }
   }
-}
 
-.imagen2 {
-  display: flex;
-  grid-area: imagen2;
-  height: 20vh;
-  width: 15%;
-  @include medidas (15%, 80px)
+  .imagen2 {
+    display: flex;
+    grid-area: imagen2;
+    height: 20vh;
+    width: 15%;
+    @include medidas(15%, 80px);
+  }
 }
-
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
@@ -198,16 +209,16 @@ main {
 
     padding: 40px;
 
- .item4 {
+    .item4 {
       @include flex;
-      flex-direction: column;;
+      flex-direction: column;
       text-decoration: none;
-      list-style-type:none;
+      list-style-type: none;
       background-color: beige;
       padding: 40px;
       margin-top: 20px;
       font-size: 25px;
-      margin-bottom: 30px; 
+      margin-bottom: 30px;
       grid-area: item4;
       height: 60vh;
       ul {

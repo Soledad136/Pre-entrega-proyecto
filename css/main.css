@@ -85,11 +85,12 @@ main {
   justify-content: space-around;
   align-items: center;
   justify-content: left;
-  align-items: start;
+  align-items: flex-start;
   background-color: burlywood;
   width: 100%;
   grid-area: hijo3;
   height: 20vh;
+  margin-top: 70px;
 }
 .contenedor-grid .hijo3 .logo {
   display: flex;
@@ -100,6 +101,14 @@ main {
   width: 120px;
   height: 120px;
   cursor: pointer;
+  align-items: flex-start;
+}
+.contenedor-grid .hijo3 .logo .estilofooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-items: flex-start;
+  margin-top: 40px;
 }
 
 @media (max-width: 700px) {
@@ -150,8 +159,7 @@ main {
   width: 70px;
   height: 70px;
 }
-
-.imagen2 {
+.grid-container .imagen2 {
   display: flex;
   grid-area: imagen2;
   height: 20vh;
