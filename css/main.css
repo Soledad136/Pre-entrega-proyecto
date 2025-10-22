@@ -147,14 +147,14 @@ main {
 .grid-container .item1 h2 {
   margin-bottom: 30px;
 }
-.grid-container .item1 .item2 {
+.grid-container .item2 {
   width: 70px;
   height: 70px;
   grid-area: item2;
   height: 60vh;
   margin-top: 80px;
 }
-.grid-container .item1 .item2 .cartanatal {
+.grid-container .item2 .cartanatal {
   margin-top: 80px;
   width: 70px;
   height: 70px;
@@ -211,14 +211,16 @@ main {
   height: 60vh;
 }
 .grid-container1 .hijo .item6 {
-  background-color: burlywood;
+  color: burlywood;
   width: 100%;
-  font-size: 15px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   grid-area: item6;
   height: 10vh;
+}
+.grid-container1 .hijo .item6 .lead {
+  font-size: 10px;
 }
 
 @media (max-width: 700px) {

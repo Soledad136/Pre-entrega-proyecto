@@ -70,13 +70,14 @@ main {
       font-size: $font-size-principal;
       color: $color-texto;
     }
-
+  
     .sol {
       margin-top: 30px;
       padding: 40px;
       @include medidas(350px, 350px);
     }
   }
+
 
   .hijo2 {
     flex-direction: column;
@@ -162,6 +163,7 @@ main {
     h2 {
       margin-bottom: 30px;
     }
+  }
 
     .item2 {
       @include medidas(70px, 70px);
@@ -174,7 +176,7 @@ main {
         @include medidas(70px, 70px);
       }
     }
-  }
+  
 
   .imagen2 {
     display: flex;
@@ -184,6 +186,7 @@ main {
     @include medidas(15%, 80px);
   }
 }
+
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
@@ -237,14 +240,17 @@ main {
     }
 
     .item6 {
-      background-color: burlywood;
+      color: $color-footer;
       width: 100%;
-      font-size: 15px;
       margin-bottom: 30px;
       display: flex;
       flex-direction: column;
       grid-area: item6;
       height: 10vh;
+
+      .lead{
+        font-size: 10px;
+      }
     }
   }
 }
