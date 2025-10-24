@@ -121,9 +121,7 @@ main {
   .contenedor-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 650px 650px 650px;
-    grid-template-areas:
-      "hijo1 hijo1" "hijo2 hijo2" "hijo3 hijo3";
-
+    grid-template-areas: "hijo1 hijo1" "hijo2 hijo2" "hijo3 hijo3";
   }
 }
 
@@ -160,22 +158,21 @@ main {
 
   .item7 {
     @include flex;
-    
+
     margin-top: 20px;
-    font-size: 25px;
     padding: 50px;
     margin-bottom: 30px;
     grid-area: item7;
     height: 60vh;
-  
-  
-    .c.natal {
-      @include flex;
+
+    .carta {
+    
+      font-size: 15px;
       width: 250px;
       height: 250px;
       margin-top: 80px;
+      margin: 20px;
     }
-
   }
 
   .imagen2 {
@@ -184,15 +181,17 @@ main {
     height: 20vh;
     @include medidas(15%, 80px);
   }
- 
+  .lead {
+    display: flex;
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 600px 600px 600px;
-    grid-template-areas:
-      "item1 item1" "item7 item7" "imagen2 imagen2 imagen2";
+    grid-template-areas: "item1 item1" "item7 item7" "imagen2 imagen2 imagen2";
   }
 }
 
@@ -208,6 +207,8 @@ main {
 
   .hijo {
     background-color: beige;
+    text-decoration: none;
+    list-style-type: none;
 
     padding: 40px;
 
@@ -257,8 +258,6 @@ main {
   .grid-container1 {
     grid-template-columns: 1fr;
     grid-template-rows: 800px 800px 800px;
-    grid-template-areas:
-      "item4 item4" "item5 item5" "item6 item6";
-      
+    grid-template-areas: "item4 item4" "item5 item5" "item6 item6";
   }
 }
