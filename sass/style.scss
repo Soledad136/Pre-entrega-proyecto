@@ -160,9 +160,10 @@ main {
 
   .item7 {
     @include flex;
-    padding: 50px;
+    
     margin-top: 20px;
     font-size: 25px;
+    padding: 50px;
     margin-bottom: 30px;
     grid-area: item7;
     height: 60vh;
@@ -170,8 +171,8 @@ main {
   
     .c.natal {
       @include flex;
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       margin-top: 80px;
     }
 
