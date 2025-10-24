@@ -13,8 +13,6 @@
   box-sizing: border-box;
 }
 
-
-
 .header {
   justify-content: flex-start;
   background-color: $color-header;
@@ -70,14 +68,13 @@ main {
       font-size: $font-size-principal;
       color: $color-texto;
     }
-  
+
     .sol {
       margin-top: 30px;
       padding: 40px;
       @include medidas(350px, 350px);
     }
   }
-
 
   .hijo2 {
     flex-direction: column;
@@ -94,30 +91,27 @@ main {
   }
 
   .hijo3 {
-    @include flex;
+    display: flex;
     justify-content: left;
-    align-items: flex-start;
+    align-content: left;
     background-color: $color-footer;
     width: 100%;
     grid-area: hijo3;
     height: 20vh;
     margin-top: 70px;
 
-
     .logo {
-      @include flex;
-      float: left;
+      display: flex;
+      justify-content: left;
       padding: 40px;
       @include medidas(120px, 120px);
       cursor: pointer;
       align-items: flex-start;
 
-      .estilofooter{
-        @include flex;
-        align-items:flex-start;
+      .estilofooter {
+        display: flex;
+        float: left;
         margin-top: 40px;
-        
-        
       }
     }
   }
@@ -125,11 +119,11 @@ main {
 
 @media (max-width: 700px) {
   .contenedor-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 650px 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 650px 650px 650px;
     grid-template-areas:
-      "hijo1 hijo2"
-      "hijo3 hijo3";
+      "hijo1 hijo1" "hijo2 hijo2" "hijo3 hijo3";
+
   }
 }
 
@@ -138,18 +132,17 @@ main {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 800px 100px;
+  grid-template-rows: 500px 250px;
   grid-template-areas:
-    "item1 item2"
+    "item1 item7"
     "imagen2 imagen2";
 
   .item1 {
     @include flex;
-    flex-direction: column;
     text-decoration: none;
     list-style-type: none;
     background-color: beige;
-    padding: 40px;
+    padding: 50px;
     margin-top: 20px;
     font-size: 25px;
     margin-bottom: 30px;
@@ -165,35 +158,40 @@ main {
     }
   }
 
-    .item2 {
-      @include medidas(70px, 70px);
-      grid-area: item2;
-      height: 60vh;
-      margin-top: 80px;
-
-      .cartanatal {
-        margin-top: 80px;
-        @include medidas(70px, 70px);
-      }
-    }
+  .item7 {
+    @include flex;
+    padding: 50px;
+    margin-top: 20px;
+    font-size: 25px;
+    margin-bottom: 30px;
+    grid-area: item7;
+    height: 60vh;
   
+  
+    .c.natal {
+      @include flex;
+      width: 200px;
+      height: 200px;
+      margin-top: 80px;
+    }
+
+  }
 
   .imagen2 {
     display: flex;
     grid-area: imagen2;
     height: 20vh;
-    width: 15%;
     @include medidas(15%, 80px);
   }
+ 
 }
 
 @media (max-width: 700px) {
   .grid-container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 800px 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 600px 600px;
     grid-template-areas:
-      "item1 item2"
-      "imagen2 imagen2";
+      "item1 item1" "item7 item7" "imagen2 imagen2 imagen2";
   }
 }
 
@@ -232,8 +230,7 @@ main {
 
     .item5 {
       .laluna {
-        width: 300px;
-        height: 300px;
+        @include medidas(300px, 300px);
         grid-area: item5;
         height: 60vh;
       }
@@ -248,7 +245,7 @@ main {
       grid-area: item6;
       height: 10vh;
 
-      .lead{
+      .lead {
         font-size: 10px;
       }
     }
@@ -257,10 +254,10 @@ main {
 
 @media (max-width: 700px) {
   .grid-container1 {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 800px 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 800px 800px 800px;
     grid-template-areas:
-      "item4 item5"
-      "item6 item6";
+      "item4 item4" "item5 item5" "item6 item6";
+      
   }
 }
