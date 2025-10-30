@@ -105,11 +105,11 @@ main {
   margin-top: 40px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .contenedor-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 650px 80px;
-    grid-template-areas: "hijo1 hijo1" "hijo2 hijo2" "hijo3 hijo3";
+    grid-template-rows: 700px 300px 800px;
+    grid-template-areas: "hijo1 hijo1" "hijo2 hijo2" "hijo3 hijo3 hijo3";
   }
 }
 /* PAGINA 1 */
@@ -174,16 +174,16 @@ main {
   height: 150px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .grid-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 700px 200px;
-    grid-template-areas: "item1 item1" "item2 item2" "imagen2 imagen2";
+    grid-template-rows: 500px 600px 200px;
+    grid-template-areas: "item1 item1" "item2 item2" "imagen2 imagen2 imagen2";
   }
 }
 .grid-container1 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 500px 1fr;
   grid-template-rows: 650px 150px;
   grid-template-areas: "item4 item5" "item6 item6";
 }
@@ -191,6 +191,7 @@ main {
   background-color: beige;
   text-decoration: none;
   list-style-type: none;
+  font-size: 25px;
   padding: 40px;
 }
 .grid-container1 .hijo .item4 {
@@ -213,10 +214,11 @@ main {
   justify-content: left;
 }
 .grid-container1 .hijo .item5 .laluna {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   grid-area: item5;
   height: 60vh;
+  border-radius: 10px;
 }
 .grid-container1 .hijo .item6 {
   color: burlywood;
@@ -231,11 +233,11 @@ main {
   font-size: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .grid-container1 {
     grid-template-columns: 1fr;
-    grid-template-rows: 800px 800px;
-    grid-template-areas: "item4 item4" "item5 item5" "item6 item6";
+    grid-template-rows: 600px 400px 700px;
+    grid-template-areas: "item4 item4" "item5 item5" "item6 item6 item6";
   }
 }
 
